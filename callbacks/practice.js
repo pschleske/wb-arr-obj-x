@@ -88,6 +88,14 @@ multiply(4, 3, function (answer) {
 */
 
 //Code Here
+function contains(array, name, cb) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === name) {
+      cb(true)
+    }
+  }
+  cb(false)
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function (result) {
@@ -107,6 +115,18 @@ contains(names, 'Colt', function (result) {
 */
 
 //Code Here
+function uniq(arr, cb) {
+  return cb(arr.filter((item, index) => arr.indexOf(item) === index))
+}
+// potential route, first try
+// function uniq(array, cb) {
+//   // for (let i = 0; i < array.length; i++) {
+//   for (let i = array.length - 1; i >= 0; i--) {
+//     if (array[i] === cb) {
+//       return cb(array[array[i].splice])
+//     }
+//   }
+// }
 
 // Do not edit the code below.
 uniq(names, function (uniqArr) {
@@ -122,6 +142,11 @@ uniq(names, function (uniqArr) {
 */
 
 //Code Here
+function each(arr, cb) {
+  for (i = 0; i < arr.length; i++) {
+    cb(arr[i], i)
+  }
+}
 
 // Do not edit the code below.
 each(names, function (item, indice) {
@@ -137,6 +162,13 @@ each(names, function (item, indice) {
 */
 
 // Code here
+function getUserById(users, id, cb) {
+  for (i = 0; i < users.length; i++) {
+    if (users[i].id === id) {
+      cb(users[i])
+    }
+  }
+}
 
 // Do not edit the code below.
 var users = [
